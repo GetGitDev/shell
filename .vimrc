@@ -23,7 +23,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 
 
-" All of your Plugins must be added before the following line
+" All of your Plugins have to be before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -38,7 +38,7 @@ filetype plugin indent on    " required
 " auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Non-Plugin stuff after this line
 " -----------------------------------------------------------------------------
 syntax on
 
