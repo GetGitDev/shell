@@ -19,6 +19,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive' 
 Plugin 'lawrencium'
 Plugin 'joshdick/onedark.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,7 +84,6 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " ---------------------------------------------------
-
 " The rest of the VIM config
 set laststatus=2  " airline status window
 set showmode      " show what mode vim is in
@@ -104,7 +106,21 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set history=1000                " remember more commands and search history
 set undolevels=1000             " use lots of levels of undo
-
+" Code folding bits
+set foldmethod=indent			" allow collapsing of methods/functions/classes
+set foldlevel=99				" number of levels allowed to fold in
+let g:SimpylFold_docstring_preview=1
+" Enable folding with the spacebar
+nnoremap <space> za
+" Let vim know how to read pep8 indents
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 " Step 3 select theme for vim color
 "	git clone git@github.com:joshdick/onedark.vim.git
 colorscheme onedark
