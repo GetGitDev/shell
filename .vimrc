@@ -92,12 +92,8 @@ let g:onedark_termcolors=256
 " The rest of the VIM config
 set laststatus=2  " airline status window
 set showmode      " show what mode vim is in
-set nowrap        " don't wrap lines
-set tabstop=4     " a tab is four spaces
-set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on
 set autoindent    " always set autoindenting on
 set number        " always show line numbers
