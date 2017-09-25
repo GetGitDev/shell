@@ -120,6 +120,8 @@ map <D-A-DOWN> <C-w><C-w>
 map <D-A-UP> <C-w>W
 " Map open file tree to ctrl+o
 map <C-o> :NERDTreeToggle<CR>
+" Custom layout for markdown files
+au BufRead,BufNewFile *.md setlocal textwidth=100
 " Let vim know how to read pep8 indents
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
