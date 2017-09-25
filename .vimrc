@@ -10,8 +10,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-"  alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
@@ -21,15 +19,19 @@ Plugin 'lawrencium'
 Plugin 'joshdick/onedark.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 
-" All of your Plugins have to be before the following line
+" All Plugins:
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
 
-" Brief help
+" Help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just
 " :PluginUpdate
@@ -40,6 +42,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Non-Plugin stuff after this line
 " -----------------------------------------------------------------------------
+let python_highlight_all=1
 syntax on
 
 
@@ -83,6 +86,8 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+" Color toggle
+let g:onedark_termcolors=256
 " ---------------------------------------------------
 " The rest of the VIM config
 set laststatus=2  " airline status window
@@ -112,6 +117,13 @@ set foldlevel=99				" number of levels allowed to fold in
 let g:SimpylFold_docstring_preview=1
 " Enable folding with the spacebar
 nnoremap <space> za
+" Map the arrow keys to nav a doc
+map <D-A-RIGHT> <C-w>l
+map <D-A-LEFT> <C-w>h
+map <D-A-DOWN> <C-w><C-w>
+map <D-A-UP> <C-w>W
+" Map open file tree to ctrl+o
+map <C-o> :NERDTreeToggle<CR>
 " Let vim know how to read pep8 indents
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
