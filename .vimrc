@@ -8,6 +8,7 @@
 set nocompatible
 filetype off
 " (make sure that git is installed prior to vim config)
+" Fonts: git clone https://github.com/powerline/fonts.git --depth=1
 " -----------------------------------------------------------------------------
 " Step 1 - Configure Vundle
 " 	    	$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
