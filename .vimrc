@@ -15,20 +15,20 @@ filetype off
 " -----------------------------------------------------------------------------
 " Step 1.1 - Set runtime path to include Vundle and initialize
 " ---------------------------------------------------
-set rtp+=~/.vim/bundle/Vundle.vim " location of vundle plugin
-call vundle#begin() " init Vundle
+set rtp+=~/.vim/bundle/Vundle.vim 			" location of vundle plugin
+call vundle#begin() 						" init Vundle
 " Vundle managed plugins (:PluginInstall) 
-Plugin 'VundleVim/Vundle.vim' 
-Plugin 'vim-airline/vim-airline' " Statusbar plugin
-Plugin 'vim-airline/vim-airline-themes' " Statusbar plugin's themes
-Plugin 'tpope/vim-fugitive'  " Git wrapper for Vim
-Plugin 'joshdick/onedark.vim' " Pastel/dark theme for Vim
-Plugin 'tmhedberg/SimpylFold' " Code folding with hotkeys
-Plugin 'vim-scripts/indentpython.vim' " Indentation script for python
-Plugin 'vim-syntastic/syntastic' " Syntax checking plugin
-Plugin 'scrooloose/nerdtree' " Directory tree plugin
-Plugin 'sheerun/vim-polyglot' " Languague pack plugin 
-Plugin 'jistr/vim-nerdtree-tabs' " Directory tree tab addon plugin
+Plugin 'VundleVim/Vundle.vim'				" Main plugin for Vundle package installer to work 
+Plugin 'vim-airline/vim-airline' 			" Statusbar plugin
+Plugin 'vim-airline/vim-airline-themes' 	" Statusbar plugin's themes
+Plugin 'tpope/vim-fugitive'  				" Git wrapper for Vim
+Plugin 'joshdick/onedark.vim' 				" Pastel/dark theme for Vim
+Plugin 'tmhedberg/SimpylFold' 				" Code folding with hotkeys
+Plugin 'vim-scripts/indentpython.vim' 		" Indentation script for python
+Plugin 'vim-syntastic/syntastic' 			" Syntax checking plugin
+Plugin 'scrooloose/nerdtree' 				" Directory tree plugin
+Plugin 'sheerun/vim-polyglot' 				" Languague pack plugin 
+Plugin 'jistr/vim-nerdtree-tabs' 			" Directory tree tab addon plugin
 Plugin 'JamshedVesuna/vim-markdown-preview' " Markdown preview plugin
 " ---------------------------------------------------
 " Step 1.2 - End of the plugins declaration
@@ -67,24 +67,24 @@ let g:onedark_termcolors=256
 " -----------------------------------------------------------------------------
 " Step 3 - The rest of the VIM settings config
 " -----------------------------------------------------------------------------
-set laststatus=2  " airline status window
-set showmode      " show what mode vim is in
-"set nowrap        " don't wrap lines
-set tabstop=4     " a tab is four spaces
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set autoindent    " always set autoindenting on
-set copyindent    " copy the previous indentation on
-set number        " always show line numbers
-set shiftwidth=4  " number of spaces to use for autoindenting
-set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     " set show matching parenthesis
-set ignorecase    " ignore case when searching
-set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
-set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
-set history=1000                " remember more commands and search history
-set undolevels=1000             " use lots of levels of undo
+set laststatus=2  					" airline status windows
+set showmode      					" show what mode vim is in
+"set nowrap  					    " don't wrap lines
+set tabstop=4     					" a tab is four spaces
+set backspace=indent,eol,start		" allow backspacing over everything in insert mode
+set autoindent    					" always set autoindenting on
+set copyindent    					" copy the previous indentation on
+set number        					" always show line numbers
+set shiftwidth=4  					" number of spaces to use for autoindenting
+set shiftround    					" use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     					" set show matching parenthesis
+set ignorecase    					" ignore case when searching
+set smartcase     					" ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab      					" insert tabs on the start of a line according to shiftwidth, not tabstop
+set hlsearch      					" highlight search terms
+set incsearch     					" show search matches as you type
+set history=1000                	" remember more commands and search history
+set undolevels=1000             	" use lots of levels of undo
 " ---------------------------------------------------
 " Step 3.1 - Syntaxtic settings
 " ---------------------------------------------------
