@@ -11,24 +11,24 @@ filetype off
 " Fonts - git $ clone https://github.com/powerline/fonts.git --depth=1
 " -----------------------------------------------------------------------------
 " Step 1 - Configure Vundle
-" 	    	$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"           $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " -----------------------------------------------------------------------------
 " Step 1.1 - Set runtime path to include Vundle and initialize
 " ---------------------------------------------------
-set rtp+=~/.vim/bundle/Vundle.vim 			" location of vundle plugin
-call vundle#begin() 						" init Vundle
+set rtp+=~/.vim/bundle/Vundle.vim           " location of vundle plugin
+call vundle#begin()                         " init Vundle
 " Vundle managed plugins (:PluginInstall) 
-Plugin 'VundleVim/Vundle.vim'				" Main plugin for Vundle package installer to work 
-Plugin 'vim-airline/vim-airline' 			" Statusbar plugin
-Plugin 'vim-airline/vim-airline-themes' 	" Statusbar plugin's themes
-Plugin 'tpope/vim-fugitive'  				" Git wrapper for Vim
-Plugin 'joshdick/onedark.vim' 				" Pastel/dark theme for Vim
-Plugin 'tmhedberg/SimpylFold' 				" Code folding with hotkeys
-Plugin 'vim-scripts/indentpython.vim' 		" Indentation script for python
-Plugin 'vim-syntastic/syntastic' 			" Syntax checking plugin
-Plugin 'scrooloose/nerdtree' 				" Directory tree plugin
-Plugin 'sheerun/vim-polyglot' 				" Languague pack plugin 
-Plugin 'jistr/vim-nerdtree-tabs' 			" Directory tree tab addon plugin
+Plugin 'VundleVim/Vundle.vim'               " Main plugin for Vundle package installer to work 
+Plugin 'vim-airline/vim-airline'            " Statusbar plugin
+Plugin 'vim-airline/vim-airline-themes'     " Statusbar plugin's themes
+Plugin 'tpope/vim-fugitive'                 " Git wrapper for Vim
+Plugin 'joshdick/onedark.vim'               " Pastel/dark theme for Vim
+Plugin 'tmhedberg/SimpylFold'               " Code folding with hotkeys
+Plugin 'vim-scripts/indentpython.vim'       " Indentation script for python
+Plugin 'vim-syntastic/syntastic'            " Syntax checking plugin
+Plugin 'scrooloose/nerdtree'                " Directory tree plugin
+Plugin 'sheerun/vim-polyglot'               " Languague pack plugin 
+Plugin 'jistr/vim-nerdtree-tabs'            " Directory tree tab addon plugin
 Plugin 'JamshedVesuna/vim-markdown-preview' " Markdown preview plugin
 " ---------------------------------------------------
 " Step 1.2 - End of the plugins declaration
@@ -61,30 +61,30 @@ let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
-endif       
+endif
 " Color toggle
 let g:onedark_termcolors=256
 " -----------------------------------------------------------------------------
 " Step 3 - The rest of the VIM settings config
 " -----------------------------------------------------------------------------
-set laststatus=2  					" airline status windows
-set showmode      					" show what mode vim is in
-"set nowrap  					    " don't wrap lines
-set tabstop=4     					" a tab is four spaces
-set backspace=indent,eol,start		" allow backspacing over everything in insert mode
-set autoindent    					" always set autoindenting on
-set copyindent    					" copy the previous indentation on
-set number        					" always show line numbers
-set shiftwidth=4  					" number of spaces to use for autoindenting
-set shiftround    					" use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     					" set show matching parenthesis
-set ignorecase    					" ignore case when searching
-set smartcase     					" ignore case if search pattern is all lowercase, case-sensitive otherwise
-set smarttab      					" insert tabs on the start of a line according to shiftwidth, not tabstop
-set hlsearch      					" highlight search terms
-set incsearch     					" show search matches as you type
-set history=1000                	" remember more commands and search history
-set undolevels=1000             	" use lots of levels of undo
+set laststatus=2                    " airline status windows
+set showmode                        " show what mode vim is in
+"set nowrap                         " don't wrap lines
+set tabstop=4                       " a tab is four spaces
+set backspace=indent,eol,start      " allow backspacing over everything in insert mode
+set autoindent                      " always set autoindenting on
+set copyindent                      " copy the previous indentation on
+"set number                         " always show line numbers
+set shiftwidth=4                    " number of spaces to use for autoindenting
+set shiftround                      " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch                       " set show matching parenthesis
+set ignorecase                      " ignore case when searching
+set smartcase                       " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab                        " insert tabs on the start of a line according to shiftwidth, not tabstop
+set hlsearch                        " highlight search terms
+set incsearch                       " show search matches as you type
+set history=1000                    " remember more commands and search history
+set undolevels=1000                 " use lots of levels of undo
 " ---------------------------------------------------
 " Step 3.1 - Syntaxtic settings
 " ---------------------------------------------------
@@ -97,12 +97,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_python_checkers = ['python', 'pylint'] 
+let g:syntastic_python_checkers = ['python', 'pylint']
 " ---------------------------------------------------
 " Step 3.2 - Code folding settings
 " ---------------------------------------------------
-set foldmethod=indent			" allow collapsing of methods/functions/classes
-set foldlevel=99				" number of levels allowed to fold in
+set foldmethod=indent           " allow collapsing of methods/functions/classes
+set foldlevel=99                " number of levels allowed to fold in
 let g:SimpylFold_docstring_preview=1
 " Enable code-folding with the spacebar
 nnoremap <space> za
@@ -132,6 +132,6 @@ au BufNewFile,BufRead *.py
 au BufRead,BufNewFile *.md setlocal textwidth=100
 "  -----------------------------------------------------------------------------
 " Step 4 - Select theme for vim color
-"	        $ git clone git@github.com:joshdick/onedark.vim.git
+"           $ git clone git@github.com:joshdick/onedark.vim.git
 "  -----------------------------------------------------------------------------
 colorscheme onedark
